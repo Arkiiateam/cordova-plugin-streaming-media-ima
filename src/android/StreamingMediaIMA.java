@@ -1,4 +1,4 @@
-package cordova-plugin-streamingmediaima;
+package cordova.plugin.streamingmediaima;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;

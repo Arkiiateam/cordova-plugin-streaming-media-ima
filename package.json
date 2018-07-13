@@ -1,0 +1,27 @@
+{
+  "name": "streamingmediaima",
+  "version": "1.0.0",
+  "description": "Media player plugin for Cordova that supports HLS and uses Google's IMA SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arkiiateam/cordova-plugin-streaming-media-ima.git"
+  },
+  "keywords": [
+    "streaming",
+    "hls",
+    "ima",
+    "google",
+    "player",
+    "video"
+  ],
+  "author": "ALOUANE Nour-Eddine (alouane00@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arkiiateam/cordova-plugin-streaming-media-ima/issues"
+  },
+  "homepage": "https://github.com/Arkiiateam/cordova-plugin-streaming-media-ima#readme"
+}
