@@ -1,4 +1,4 @@
-# Cordova Streaming Media IMA plugin
+# Cordova Streaming Media IMA plugin -Arkiia project-
 
 For iOS and Android,
 
