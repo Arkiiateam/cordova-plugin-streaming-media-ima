@@ -1,2 +1,24 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-streamingmediaima" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>StreamingMediaIMA</name><js-module name="StreamingMediaIMA" src="www/StreamingMediaIMA.js"><clobbers target="cordova.plugins.StreamingMediaIMA" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="StreamingMediaIMA"><param name="android-package" value="cordova-plugin-streamingmediaima.StreamingMediaIMA" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml" /><source-file src="src/android/StreamingMediaIMA.java" target-dir="src/cordova-plugin-streamingmediaima/StreamingMediaIMA" /></platform><platform name="ios"><config-file parent="/*" target="config.xml"><feature name="StreamingMediaIMA"><param name="ios-package" value="StreamingMediaIMA" /></feature></config-file><source-file src="src/ios/StreamingMediaIMA.m" /></platform></plugin>
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-streamingmediaima" version="1.0.0">
+   <name>StreamingMediaIMA</name>
+   <js-module name="StreamingMediaIMA" src="www/StreamingMediaIMA.js">
+      <clobbers target="cordova.plugins.StreamingMediaIMA" />
+   </js-module>
+   <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="StreamingMediaIMA">
+            <param name="android-package" value="cordova-plugin-streamingmediaima.StreamingMediaIMA" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/StreamingMediaIMA.java" target-dir="src/cordova-plugin-streamingmediaima/StreamingMediaIMA" />
+   </platform>
+   <platform name="ios">
+      <config-file parent="/*" target="config.xml">
+         <feature name="StreamingMediaIMA">
+            <param name="ios-package" value="StreamingMediaIMA" />
+         </feature>
+      </config-file>
+      <source-file src="src/ios/StreamingMediaIMA.m" />
+   </platform>
+</plugin>
