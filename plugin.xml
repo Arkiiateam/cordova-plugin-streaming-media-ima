@@ -5,9 +5,7 @@
       <clobbers target="StreamingMediaIMA" />
    </js-module>
    <platform name="android">
-        <framework src="es.lombrinus.projects.mods:AJCPlayer:1.0"/>
-        <framework src="es.lombrinus.projects.mods:AJCNotification:1.0"/>
-        <framework src="es.lombrinus.projects.mods:AJCast:1.0"/>
+        <framework src="cn.jzvd:jiaozivideoplayer:6.2.12"/>
       <config-file parent="/*" target="res/xml/config.xml">
          <feature name="StreamingMediaIMA">
             <param name="android-package" value="cordova.plugin.streamingmediaima.StreamingMediaIMA" />
@@ -15,6 +13,7 @@
       </config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/StreamingMediaIMA.java" target-dir="src/cordova/plugin/streamingmediaima/StreamingMediaIMA" />
+      <source-file src="src/res/layout/acj_player_layout.xml" target-dir="res/layout/"/>
    </platform>
    <platform name="ios">
       <config-file parent="/*" target="config.xml">
