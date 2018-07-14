@@ -1,9 +1,14 @@
 package cordova.plugins.streamingmediaima;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+
+import com.ionicframework.elbotola609035.R;
 
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
@@ -55,7 +60,7 @@ public class StreamingMediaIMA extends CordovaPlugin {
     return true;
   }
   private boolean playVideo(String url, JSONObject options) {
-    url = "http://jzvd.nathen.cn/c6e3dc12a1154626b3476d9bf3bd7266/6b56c5f0dc31428083757a45764763b0-5287d2089db37e62345123a1be272f8b.mp4";
+    url = "http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/arriadia/hls_snrt/index.m3u8";
     return play(StreamingVideo.class, url, options);
   }
 

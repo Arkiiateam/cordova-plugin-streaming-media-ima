@@ -5,18 +5,18 @@
       <clobbers target="StreamingMediaIMA" />
    </js-module>
    <platform name="android">
-        <framework src="cn.jzvd:jiaozivideoplayer:6.2.12"/>
+        <framework src="com.github.tcking:giraffeplayer2:0.1.19"/>
       <config-file parent="/*" target="res/xml/config.xml">
          <feature name="StreamingMediaIMA">
-            <param name="android-package" value="cordova.plugins.streamingmediaima" />
+            <param name="android-package" value="cordova.plugins.streamingmediaima.StreamingMediaIMA" />
          </feature>
       </config-file>
       <config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<activity android:configChanges="orientation|screenSize" android:name="cordova.plugins.streamingmediaima.StreamingVideo" android:label="Simple Video Stream"></activity>
+			<activity android:configChanges="orientation|screenSize" android:name="cordova.plugins.streamingmediaima.StreamingVideo" android:label="Video Stream"></activity>
 		</config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
-      <source-file src="src/android/StreamingMediaIMA.java" target-dir="src/cordova/plugins/streamingmediaima/StreamingMediaIMA" />
-      <source-file src="src/android/StreamingVideo.java" target-dir="src/cordova/plugins/streamingmediaima/StreamingVideo" />
+      <source-file src="src/android/StreamingMediaIMA.java" target-dir="src/cordova/plugins/streamingmediaima/" />
+      <source-file src="src/android/StreamingVideo.java" target-dir="src/cordova/plugins/streamingmediaima/" />
       <source-file src="src/res/layout/acj_player_layout.xml" target-dir="res/layout/"/>
    </platform>
    <platform name="ios">
