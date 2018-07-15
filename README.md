@@ -9,6 +9,10 @@ This plugin allows you to stream hls audio and video in a fullscreen, native pla
 * 1.0.0 Works with Cordova 3.x
 * 1.0.1+ Works with Cordova >= 4.0
 
+## Vast ad limitations
+
+Please refer to https://developers.google.com/interactive-media-ads/docs/sdks/html5/compatibility#vmap-footnote
+
 ## Installation
 
 ```
@@ -18,7 +22,6 @@ cordova plugin add https://github.com/Arkiiateam/cordova-plugin-streaming-media-
 ### iOS specifics
 
 ### Android specifics
-* Uses VideoView and MediaPlayer.
 
 ## Usage
 
@@ -26,7 +29,7 @@ cordova plugin add https://github.com/Arkiiateam/cordova-plugin-streaming-media-
   var videoUrl = STREAMING_VIDEO_URL;
 
   // Just play a video
-  window.plugins.streamingMedia.playVideo(videoUrl);
+  window.plugins.streamingMedia.playVideo(VIDEO_URL, {adTagUrl: AD_TAG_URL});
 
   // Play a video with callbacks
   var options = {
@@ -38,40 +41,10 @@ cordova plugin add https://github.com/Arkiiateam/cordova-plugin-streaming-media-
     },
     orientation: 'landscape',
     shouldAutoClose: true,  // true(default)/false
-    controls: true // true(default)/false. Used to hide controls on fullscreen
+    controls: true // true(default)/false. Used to hide controls on fullscreen,
+    adTagUrl: AD_TAG_URL
   };
   window.plugins.streamingMedia.playVideo(videoUrl, options);
-
-
-  var audioUrl = STREAMING_AUDIO_URL;
-
-  // Play an audio file (not recommended, since the screen will be plain black)
-  window.plugins.streamingMedia.playAudio(audioUrl);
-
-  // Play an audio file with options (all options optional)
-  var options = {
-    bgColor: "#FFFFFF",
-    bgImage: "<SWEET_BACKGROUND_IMAGE>",
-    bgImageScale: "fit", // other valid values: "stretch", "aspectStretch"
-    initFullscreen: false, // true is default. iOS only.
-    keepAwake: false, // prevents device from sleeping. true is default. Android only.
-    successCallback: function() {
-      console.log("Player closed without error.");
-    },
-    errorCallback: function(errMsg) {
-      console.log("Error! " + errMsg);
-    }
-  };
-  window.plugins.streamingMedia.playAudio(audioUrl, options);
-
-  // Stop current audio
-  window.plugins.streamingMedia.stopAudio();
-
-  // Pause current audio (iOS only)
-  window.plugins.streamingMedia.pauseAudio();
-
-  // Resume current audio (iOS only)
-  window.plugins.streamingMedia.resumeAudio();  
 
 ```
 
