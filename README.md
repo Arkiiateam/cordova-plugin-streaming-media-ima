@@ -26,7 +26,7 @@ cordova plugin add https://github.com/Arkiiateam/cordova-plugin-streaming-media-
 ## Usage
 
 ```javascript
-  var videoUrl = STREAMING_VIDEO_URL;
+  var VIDEO_URL = STREAMING_VIDEO_URL;
 
   // Just play a video
   window.plugins.streamingMedia.playVideo(VIDEO_URL, {adTagUrl: AD_TAG_URL});
