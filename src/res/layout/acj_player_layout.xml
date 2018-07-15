@@ -24,10 +24,15 @@
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="200dp"/>-->
 
-    <tcking.github.com.giraffeplayer2.VideoView
+    <!-- <tcking.github.com.giraffeplayer2.VideoView
       android:id="@+id/video_view"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
+      android:layout_height="match_parent"/> -->
+
+    <include
+        layout="@layout/mk_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
   </LinearLayout>
 

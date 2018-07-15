@@ -5,7 +5,8 @@
       <clobbers target="StreamingMediaIMA" />
    </js-module>
    <platform name="android">
-        <framework src="com.github.tcking:giraffeplayer2:0.1.19"/>
+        <framework src="com.google.ads.interactivemedia.v3:interactivemedia:3.8.7"/>
+        <framework src="com.google.android.gms:play-services-ads:15.0.1"/>
       <config-file parent="/*" target="res/xml/config.xml">
          <feature name="StreamingMediaIMA">
             <param name="android-package" value="cordova.plugins.streamingmediaima.StreamingMediaIMA" />
@@ -13,6 +14,9 @@
       </config-file>
       <config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<activity android:configChanges="orientation|screenSize" android:name="cordova.plugins.streamingmediaima.StreamingVideo" android:label="Video Stream"></activity>
+            <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 		</config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/StreamingMediaIMA.java" target-dir="src/cordova/plugins/streamingmediaima/" />
