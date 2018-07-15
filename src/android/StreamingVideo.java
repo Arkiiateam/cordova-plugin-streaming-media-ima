@@ -53,6 +53,7 @@ public class StreamingVideo extends Activity implements
   private ViewGroup mAdUiContainer;
   // Whether an ad is displayed.
   private boolean mIsAdDisplayed;
+  public String adTagUrl;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +82,7 @@ public class StreamingVideo extends Activity implements
 
     Bundle b = getIntent().getExtras();
     mVideoUrl = b.getString("mediaUrl");
+    adTagUrl = b.getString("adTagUrl");
     mShouldAutoClose = b.getBoolean("shouldAutoClose", true);
     mControls = b.getBoolean("controls", true);
 
@@ -93,6 +95,8 @@ public class StreamingVideo extends Activity implements
     relLayout.addView(mVideoView);
 
     mAdUiContainer = relLayout;
+
+    requestAds(adTagUrl);
 
     // Create progress throbber
     mProgressBar = new ProgressBar(this);
@@ -147,8 +151,6 @@ public class StreamingVideo extends Activity implements
       mMediaController = new MediaController(this);
       mMediaController.setAnchorView(mVideoView);
       mMediaController.setMediaPlayer(mVideoView);
-
-      requestAds("<![CDATA[http://pubads.g.doubleclick.net/gampad/ads?sz=640x480 &iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s &gdfp_req=1&env=vp&output=vast&unviewed_position_start=1 &cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=]]>");
 
       if (!mControls) {
         mMediaController.setVisibility(View.GONE);
@@ -322,12 +324,13 @@ public class StreamingVideo extends Activity implements
         // AdEventType.CONTENT_PAUSE_REQUESTED is fired immediately before a video
         // ad is played.
         mIsAdDisplayed = true;
-        mVideoView.pause();
+        mVideoView.suspend();
         break;
       case CONTENT_RESUME_REQUESTED:
         // AdEventType.CONTENT_RESUME_REQUESTED is fired when the ad is completed
         // and you should start playing your content.
         mIsAdDisplayed = false;
+        mProgressBar.setVisibility(View.VISIBLE);
         mVideoView.resume();
         break;
       case ALL_ADS_COMPLETED:

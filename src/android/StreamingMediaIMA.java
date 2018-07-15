@@ -55,7 +55,7 @@ public class StreamingMediaIMA extends CordovaPlugin {
     return true;
   }
   private boolean playVideo(String url, JSONObject options) {
-    url = "http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/arriadia/hls_snrt/index.m3u8";
+
     return play(StreamingVideo.class, url, options);
   }
 
