@@ -27,9 +27,10 @@ cordova plugin add https://github.com/Arkiiateam/cordova-plugin-streaming-media-
 
 ```javascript
   var VIDEO_URL = STREAMING_VIDEO_URL;
+  var AD_TAG = VAST_AD_TAG_URL;
 
   // Just play a video
-  window.plugins.streamingMedia.playVideo(VIDEO_URL, {adTagUrl: AD_TAG_URL});
+  window.plugins.streamingMedia.playVideo(VIDEO_URL, {adTagUrl: AD_TAG});
 
   // Play a video with callbacks
   var options = {
@@ -42,7 +43,7 @@ cordova plugin add https://github.com/Arkiiateam/cordova-plugin-streaming-media-
     orientation: 'landscape',
     shouldAutoClose: true,  // true(default)/false
     controls: true // true(default)/false. Used to hide controls on fullscreen,
-    adTagUrl: AD_TAG_URL
+    adTagUrl: AD_TAG
   };
   window.plugins.streamingMedia.playVideo(videoUrl, options);
 
